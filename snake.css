@@ -1,0 +1,285 @@
+html{
+    font-family: 'Russo One', sans-serif;
+}
+
+.area{
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 25%;
+    z-index: -1;
+}
+.snakeLogo{
+    position: absolute;
+    display: block; 
+    animation: animate 20s ease-in infinite;
+    bottom: -30%;
+}
+
+@keyframes animate {
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(-1500px);
+    }
+}
+
+.snakeLogo:nth-of-type(1){
+    right: 0%;
+    width: 10%;
+    animation-delay: 2s;
+}
+.snakeLogo:nth-of-type(2){
+    right: 5%;
+    width: 15%;
+    animation-delay: 0s;
+}
+.snakeLogo:nth-of-type(3){
+    right: 30%;
+    width: 30%;
+    animation-delay: 7s;
+}
+.snakeLogo:nth-of-type(4){
+    right: 80%;
+    width: 15%;
+    animation-delay: 10s;
+}
+.snakeLogo:nth-of-type(5){
+    right: 85%;
+    width: 20%;
+    animation-delay: 5s;
+}
+.snakeLogo:nth-of-type(6){
+    right: 90%;
+    width: 10%;
+    animation-delay: 13s;
+}
+.mainPanel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    z-index:2;
+}
+
+.resultsPanel{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    flex-wrap: nowrap;
+    width: 50%;
+}
+.mainHeader{
+    font-size: 3rem;
+    text-align: center;
+    margin: 1rem;
+}
+
+.smallHeader{
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: block;
+    font-weight: bold;
+}
+
+.buttonPanel{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    margin-top: 1rem;
+}
+
+.board{
+    border: 10px solid black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.appearingText{
+    display: none;
+    font-family: 'Russo One', sans-serif;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+#headerBoard{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+#saveResults{
+    margin-left: 1rem;
+}
+
+.scorePanel{
+    font-size: 2rem;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.playerScore{
+    margin: 0.5rem;
+}
+
+.scoreDisplay1{
+    color: green;
+}
+
+.scoreDisplay2{
+    color:purple;
+}
+
+.pixel {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.backgroundPixel:nth-of-type(2n) {
+    background-color: #b5e48c;
+}
+
+.backgroundPixel:nth-of-type(2n+1) {
+    background-color: #99d98c;
+}
+
+.backgroundPixel.snake1{
+    background-color: green;
+}
+
+.backgroundPixel.snake2{
+    background-color: purple;
+}
+
+.backgroundPixel.apple{
+    background-color: red;
+}
+
+.backgroundPixel.blueberry{
+    background-color: blue;
+}
+
+#numPlayersSelection{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+.dropDown{
+    font-family: 'Russo One', sans-serif;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-align: center;
+    align-self: center;
+    height: fit-content;
+    margin-left: 1rem;
+    border: 1px solid #168aad;
+    border-radius: 0.5rem;
+}
+
+.button{
+    font-family: 'Russo One', sans-serif;
+    font-size: 2rem;
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid #168aad;
+    border-radius: 0.5rem;
+    background-color: #1a759f;
+    color: white;
+    box-shadow: 0 4px 0 #1e6091;
+    padding: 1rem;
+    height: fit-content;
+}
+
+.button:hover {
+    border: 1px solid #1a759f;
+    background-color: #1e6091;
+    color: white;
+    box-shadow: 0 4px 0 #184e77;
+    cursor: pointer;
+}
+
+.button:disabled {
+    border: 1px solid #6c757d;
+    background-color: #adb5bd;
+    color: white;
+    box-shadow: 0 4px 0 #495057;
+    cursor: unset;
+}
+.input{
+    border-radius: 0.5rem;
+    font-family: 'Russo One', sans-serif;
+    font-size: 1.5rem;
+    width: 50%;
+    margin-bottom: 1rem;
+}
+
+.input:focus{
+    outline: none;
+}
+
+.input:invalid {
+    border: 2px solid red;
+  }
+  
+.input:valid {
+    border: 2px solid #1a759f;
+  }
+
+#allResultsHeader{
+    display: none;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #76c893;
+    text-align: center;
+    font-size: 1rem; 
+    box-shadow: 0 4px 0 #52b69a;
+}
+  
+#playerNameTh {
+    width: 30%;
+}
+  
+#scoreTh {
+    width: 20%;
+}
+  
+#timeTh {
+    width: 50%;
+  }
+  
+th, td {
+    padding: 1rem;
+}
+
+th{
+    background-color: hsl(120, 100%, 25%);
+    color: white;
+    font-weight:normal;
+}
+
+tr:nth-of-type(2n){
+      background-color: #b5e48c;
+}
+
+tr:nth-of-type(2n+1){
+    background-color: #99d98c;
+}
+
+tr.currentResult {
+    background-color: #1a759f;
+    border: 2px solid #1e6091;
+}
